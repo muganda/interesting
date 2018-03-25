@@ -17,5 +17,9 @@ class UserTestCase(TestCase):
         res = self.client().post('/api/v1/users/register',data=json.dumps(data),content_type='application/json')
         self.assertEqual(res.status_code,200)
 
+    def test_index(self):
+	    res = self.client().get('/api/v1/index')
+	    self.assertEqual(res.status_code,200)
+
 if __name__ == "__main__":
     main()
