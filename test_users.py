@@ -13,7 +13,6 @@ class UserTestCase(TestCase):
         #    db.create_all()  
 
     def test_registration(self):
-        #Test with an empty email
         data = {"first_name":"David","password":"123456","last_name":"Ssali"}
         res = self.client().post('/api/v1/users/register',data=json.dumps(data),content_type='application/json')
         self.assertEqual(res.status_code,200)
