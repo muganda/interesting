@@ -4,3 +4,5 @@ flask-migrate
 psycopg2
 pylint
 flask-script
+coverage
+python-coveralls
